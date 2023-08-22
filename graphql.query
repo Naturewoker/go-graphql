@@ -1,0 +1,29 @@
+query getTodos {
+  todos {
+    id
+    text
+    done
+    user {
+      id
+      email
+      name
+    }
+  }
+}
+
+mutation createTodo {
+  createTodo(input: {
+    text: "My second todo",
+    userId: "222",
+  })
+  {
+  	id
+    text
+    done
+    user {
+      id
+      email
+      name
+    }
+  }
+}
